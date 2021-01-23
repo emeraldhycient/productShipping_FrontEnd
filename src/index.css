@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'sans-serif', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#subheader {
+    background-image: url("./images/kinsey-cB8YiJt_0Y0-unsplash.jpg");
+    height: 580px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+hr {
+    color: orange;
+}
+
+#brander {
+    padding-top: 200px;
+    text-transform: uppercase;
+}
+
+.box {
+    width: 100%;
+    height: 340px;
+}
+
+#tag {
+    text-transform: uppercase;
+}
+
+#whychooseustitle {
+    text-transform: uppercase;
+    font-size: 1.9em;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+}
+
+hr {
+    width: 100px;
+    height: 2px;
+    background-color: rgb(58, 135, 170);
+}
+
+footer {
+    height: 400px;
+}
+
+@media(max-width:500px) {
+    #ham {
+        width: 35px;
+        height: 3px;
+        background-color: black;
+        margin: 3px 0;
+    }
+    #lgham {
+        display: none;
+    }
+    #subheader {
+        background-image: url("./images/kinsey-cB8YiJt_0Y0-unsplash.jpg");
+        height: 600px;
+        background-size: cover;
+        background-color: rgba(rgb(76, 0, 255), rgb(129, 165, 32), rgb(137, 137, 219), .5);
+    }
+    #blur {
+        height: 700px;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+    #subheadertitle {
+        font-size: 1em;
+        font-weight: bolder;
+    }
+    .box {
+        width: 90%;
+    }
+}
+
+@media(min-width:500px) {
+    #ham {
+        display: none;
+    }
+    #lgham a:hover {
+        background-color: rgb(252, 250, 246);
+        padding: 10px;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    #lgham a h6:hover {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        color: whitesmoke;
+    }
+    #subheader {
+        background-image: url("./images/kinsey-cB8YiJt_0Y0-unsplash.jpg");
+        height: 600px;
+        background-size: cover;
+        background-color: rgba(rgb(76, 0, 255), rgb(129, 165, 32), rgb(137, 137, 219), .5);
+    }
+    #blur {
+        height: 700px;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+    #subheadertitle {
+        font-size: 2em;
+        font-weight: bolder;
+    }
 }
