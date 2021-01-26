@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+
 import Footer from './Footer'
 import Header from './Header'
 import SecondSubHeader from './SecondSubHeader'
@@ -30,7 +30,7 @@ export default function Contact() {
                                 <h6 className="mb-2">Email</h6>
                                 <input type="email" className="form-control mb-2" value={email} onChange={event => setEmail(event.target.vale)} required />
                                 <h6 className="mb-2">subject</h6>
-                                <input type="email" className="form-control mb-2" value={email} onChange={event => setSubject(event.target.vale)} required />
+                                <input type="text" className="form-control mb-2" value={subject} onChange={event => setSubject(event.target.vale)} required />
                                 <h6 className="mb-2">Message</h6>
                                 <textarea value={message} onChange={setMessage} cols="30" rows="10" className="form-control">
                                 </textarea>

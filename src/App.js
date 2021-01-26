@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import axios from "axios"
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,24 +12,6 @@ import Register from './components/Register'
 import Tracking from './components/Tracking'
 
 export default function App() {
-  const [datax, setdata] = useState({})
-
-  let formdata = new FormData()
-  formdata.append('name', 'hyman')
-  formdata.append('age', '40')
-
-  const testbtn = async () => {
-    axios({
-      method: "post",
-      url: 'http://localhost/rald/producttrackerapi/api_v1/controller/controller.php',
-      data: formdata
-    })
-      .then(res => {
-        console.log(res);
-        setdata(res.data)
-      })
-      .catch(err => console.error(err))
-  }
 
   return (
     <Router>
