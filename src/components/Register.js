@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import axios from "axios"
 
+import { setToken } from "../authHandler/auth"
 import Footer from './Footer'
 import Header from './Header'
 import SecondSubHeader from './SecondSubHeader'
@@ -21,6 +22,7 @@ export default function Register() {
         e.preventDefault()
         if (checklen(password, cpassword) && checkmatch(password, cpassword)) {
             const formdata = new FormData()
+            formdata.append("register", "register")
             formdata.append("username", username)
             formdata.append("email", email)
             formdata.append("phone", phone)
@@ -32,8 +34,17 @@ export default function Register() {
                 data: formdata
             })
                 .then(res => {
-                    notify("account created successfully")
-                    console.log(res);
+                    if (res.data.status === 'success') {
+                        setToken(res.data.data.token)
+                        notify(res.data.data.message);
+
+                        <Redirect to={{
+                            pathname: "/dashboard",
+                            search: `?username=${res.data.data.username}`
+                        }} />
+
+                    }
+                    console.log(res.data);
                 })
                 .catch(err => console.error(err))
 
@@ -41,23 +52,22 @@ export default function Register() {
     }
 
     const checklen = (pass, cpass) => {
-        if (pass.length > 8 && cpass.length > 8) {
-            return true
-        } else {
+        if (pass.length < 8 && cpass.length < 8) {
             notify("password length is too small")
             return false
         }
+
+        return true
 
     }
 
     const checkmatch = (pass, cpass) => {
 
-        if (pass === cpass) {
-            return true
-        } else {
+        if (pass !== cpass) {
             notify("passwords doesn't match")
             return false
         }
+        return true
     }
 
     return (
