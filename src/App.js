@@ -13,6 +13,7 @@ import Tracking from './components/Tracking'
 import Dashboard from './components/AdminDashboard/Home'
 import Createshipment from './components/AdminDashboard/CreateShipment'
 import ListShipping from './components/AdminDashboard/ListShipping'
+import Manageshipment from './components/AdminDashboard/Manageshipment'
 
 export default function App() {
 
@@ -27,6 +28,8 @@ export default function App() {
         <Route exact path="/dashboard" component={Dashboard}></Route>
         <Route exact path="/dashboard/createshipment" component={Createshipment}></Route>
         <Route exact path="/dashboard/allshipments" component={ListShipping}></Route>
+        <Route exact path="/dashboard/manageshipment/" component={Manageshipment}></Route>
+        <Route exact path="/dashboard/manageshipment/:tracking" component={Manageshipment}></Route>
       </Switch>
     </Router>
   )

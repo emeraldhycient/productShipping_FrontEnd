@@ -10,10 +10,10 @@ export default function Home() {
         <>
             <Header />
             <div className="row">
-                <div className="col-md-3 sidebarmaincontainer">
+                <div className="col-md-2 sidebarmaincontainer">
                     <Sidebar />
                 </div>
-                <div className="col-md-9 largecontainer"></div>
+                <div className="col-md-10 largecontainer"></div>
             </div>
         </>
     )

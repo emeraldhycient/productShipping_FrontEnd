@@ -8,6 +8,7 @@ body {
 
 .sidebar {
     list-style-type: none;
+    margin-left: -10px;
 }
 
 .sidebar li {
@@ -26,25 +27,21 @@ body {
     text-decoration: none;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
     border-radius: 10px;
-}
-
-.blur {
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sidebarcontainer {
     height: 100vh;
-    background-image: url("../.././images/kinsey-cB8YiJt_0Y0-unsplash.jpg");
-    background-size: cover;
+    margin-left: -10px;
+    border-right: 1px solid #5bc0de;
 }
 
 .sidebarmaincontainer {
     position: static;
     height: 100vh;
+    margin-left: -10px;
 }
 
 .largecontainer {

@@ -20,7 +20,7 @@ function ListShipping() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/controller.php',
+            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/listshipping.php',
             data: formdata
         })
             .then(res => {
@@ -45,13 +45,13 @@ function ListShipping() {
         <>
             <Header />
             <div className="row">
-                <div className="col-md-3 sidebarmaincontainer">
+                <div className="col-md-2 sidebarmaincontainer">
                     <Sidebar />
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-10">
                     <div className="container">
                         <h6 className="mt-4 mb-2 ml-4 ">Location: <span className="text-info">{location.pathname}</span></h6>
-                        <button className="btn btn-sm btn-dark text-white mr-2 mb-2" style={{ float: 'right' }}><Link to="/dashboard/manage">Manage</Link></button>
+                        <button className="btn btn-sm btn-dark text-white mr-2 mb-2" style={{ float: 'right' }}><Link to="/dashboard/manageshipment">Manage</Link></button>
                         <Parselisting allShipment={allShipment} />
                     </div>
                 </div>

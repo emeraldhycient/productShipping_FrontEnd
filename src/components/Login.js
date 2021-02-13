@@ -35,7 +35,7 @@ export default function Login() {
 
             axios({
                 method: "post",
-                url: 'http://localhost/rald/producttrackerapi/api_v1/controller/controller.php',
+                url: 'http://localhost/rald/producttrackerapi/api_v1/controller/access.php',
                 data: formdata
             })
                 .then(res => {

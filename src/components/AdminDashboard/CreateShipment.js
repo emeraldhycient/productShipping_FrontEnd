@@ -71,7 +71,7 @@ function CreateShipment() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/controller.php',
+            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/createShipment.php',
             data: formdata
         }).then(res => {
             if (res.data.status === "success") {
@@ -94,10 +94,10 @@ function CreateShipment() {
         <>
             <Header />
             <div className="row">
-                <div className="col-md-3 sidebarmaincontainer">
+                <div className="col-md-2 sidebarmaincontainer">
                     <Sidebar />
                 </div>
-                <div className="col-md-9 largecontainer">
+                <div className="col-md-10 largecontainer">
                     <h6 className="mt-4 mb-5 ml-4 ">Location: <span className="text-info">{location.pathname}</span></h6>
                     <Toaster
                         toastOptions={{

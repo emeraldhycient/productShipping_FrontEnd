@@ -19,12 +19,14 @@ export default function Tracking() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/controller.php',
+            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/tracking.php',
             data: formdata
         })
             .then(res => {
                 if (res.data.status === 'success') {
                     setproducts(res.data.data)
+                } else {
+                    console.log(res.data);
                 }
             })
             .catch(err => console.error(err))

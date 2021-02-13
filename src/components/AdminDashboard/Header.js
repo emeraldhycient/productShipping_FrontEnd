@@ -8,7 +8,7 @@ function Header() {
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ borderBottom: '1px solid #5bc0de' }}>
                     <span className="navbar-brand text-info offset-md-1 offset-1">
                         <b>Shiplive</b>
                     </span>
