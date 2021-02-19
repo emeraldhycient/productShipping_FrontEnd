@@ -97,8 +97,8 @@ function CreateShipment() {
                 <div className="col-md-2 sidebarmaincontainer">
                     <Sidebar />
                 </div>
-                <div className="col-md-10 largecontainer">
-                    <h6 className="mt-4 mb-5 ml-4 ">Location: <span className="text-info">{location.pathname}</span></h6>
+                <div className="col-md-10 largecontainer container">
+                    <h6 className="mt-4 mb-5 ml-4 "><i className="fa fa-compass fa-2x pr-2 text-info"></i>Location: <span className="text-info">{location.pathname}</span></h6>
                     <Toaster
                         toastOptions={{
                             // Define default options
@@ -257,8 +257,7 @@ function CreateShipment() {
                             </div>
                         </div>
                         <div className="bg-light p-2 mt-2">
-                            <button type="reset" className="btn btn-sm btn-danger">Reset form</button>
-                            <button type="submit" style={{ float: "right" }} className="btn btn-sm btn-info">Create Shipment</button>
+                            <button type="submit" style={{ float: "right" }} className="btn btn-sm btn-info"><i className="fa fa-truck mr-1"></i>Create Shipment</button>
                         </div>
                     </form>
                 </div>

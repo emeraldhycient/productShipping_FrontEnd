@@ -20,7 +20,7 @@ function Manageshipment() {
                 </div>
                 <div className="col-md-">
                     <div className="container">
-                        <h6 className="mt-4 mb-2 ml-4 ">Location: <span className="text-info">{location.pathname}</span></h6>
+                        <h6 className="mt-4 mb-2 ml-4 "><i className="fa fa-compass fa-2x pr-2 text-info"></i>Location: <span className="text-info">{location.pathname}</span></h6>
                         {
                             tracking ? <EditShipping /> : <Parsemanagementlist />
                         }

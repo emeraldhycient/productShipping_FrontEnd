@@ -52,10 +52,16 @@ body {
     #navbarthing {
         display: none;
     }
+    .status {
+        margin-top: -40px;
+    }
 }
 
 @media(max-width:760px) {
     .sidebarmaincontainer {
         display: none;
+    }
+    .status {
+        margin-left: 12px;
     }
 }

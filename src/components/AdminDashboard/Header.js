@@ -19,16 +19,31 @@ function Header() {
                     <div className="collapse navbar-collapse offset-md-7" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto" id="navbarthing">
                             <li className="nav-item active mr-2">
-                                <Link to="/">Home</Link>
+                                <Link to="/dashboard" className="text-muted">
+                                    <i className="fa fa-user text-muted pr-1"></i>IGWEZE HYCIENT
+                                </Link>                            </li>
+                            <li className="nav-item mr-2">
+                                <Link to="/dashboard" className="text-muted">
+                                    <i className="fa fa-dashboard text-muted pr-2"></i>Dashboard
+                                </Link>
                             </li>
                             <li className="nav-item mr-2">
-                                <Link to="/Contact_us">Contact-Us</Link>
+                                <Link to="/dashboard/createshipment" className="text-muted">
+                                    <i className="fa fa-clipboard text-muted pr-2"></i>Create Shipment
+                                </Link>                            </li>
+                            <li className="nav-item mr-2">
+                                <Link to="/dashboard/allshipments" className="text-muted"><i className="fa fa-truck text-muted pr-2"></i>All Shipment</Link>
                             </li>
                             <li className="nav-item mr-2">
-                                <Link to="/tracking">Tracking </Link>
+                                <Link to="/dashboard/manageshipment" className="text-muted">
+                                    <i className="fa fa-tasks text-muted pr-1"></i>Manage Shipment
+                                </Link>
                             </li>
                             <li className="nav-item mr-2">
-                                <Link to="/login">Login</Link>
+                                <Link to="" className="text-muted"><i className="fa fa-download text-muted pr-2"></i>Export Pdf</Link>
+                            </li>
+                            <li className="nav-item mr-2">
+                                <i className="fa fa-unlink pr-2 text-muted"></i><b>Logout</b>
                             </li>
                         </ul>
 

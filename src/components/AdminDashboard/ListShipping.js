@@ -50,7 +50,7 @@ function ListShipping() {
                 </div>
                 <div className="col-md-10">
                     <div className="container">
-                        <h6 className="mt-4 mb-2 ml-4 ">Location: <span className="text-info">{location.pathname}</span></h6>
+                        <h6 className="mt-4 mb-2 ml-4 "><i className="fa fa-compass fa-2x pr-2 text-info"></i>Location: <span className="text-info">{location.pathname}</span></h6>
                         <button className="btn btn-sm btn-dark text-white mr-2 mb-2" style={{ float: 'right' }}><Link to="/dashboard/manageshipment">Manage</Link></button>
                         <Parselisting allShipment={allShipment} />
                     </div>

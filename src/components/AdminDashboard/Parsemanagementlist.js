@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import { Link, Redirect, useLocation } from "react-router-dom"
+import { Link, withRouter, useLocation } from "react-router-dom"
 import toast, { Toaster } from 'react-hot-toast';
 
 
@@ -58,11 +58,9 @@ function Parsemanagementlist(props) {
                 if (res.data.status === 'success') {
                     notify(res.data.message);
 
-                    < Redirect to={{
-                        pathname: "/dashboard/manageshipment/",
-                        state: { from: "/dashboard/manageshipment/" }
-                    }
-                    } />
+                    setTimeout(() => {
+                        props.history.push("/dashboard/manageshipment/")
+                    }, 1000);
 
                 } else {
                     notify(res.data.message)
@@ -121,12 +119,12 @@ function Parsemanagementlist(props) {
                                     <td>{item.id}</td>
                                     <td>
                                         <div className="btn-group-sm d-flex">
-                                            <div className="btn btn-info"><Link className="text-white" to={`${location.pathname}/${item.tracking}`}>Edit</Link></div>
+                                            <div className="btn btn-info"><Link className="text-white" to={`${location.pathname}/${item.tracking}`}><i className="fa fa-edit mr-1"></i>Edit</Link></div>
                                             <div className="btn btn-danger"
                                                 onClick={() => {
                                                     handleDelete(item.id)
                                                 }}
-                                            >Delete</div>
+                                            ><i className="fa fa-trash pr-1"></i>Delete</div>
                                         </div>
                                     </td>
                                     <td>{item.tracking}</td>
@@ -158,4 +156,4 @@ function Parsemanagementlist(props) {
     )
 }
 
-export default Parsemanagementlist
+export default withRouter(Parsemanagementlist)
