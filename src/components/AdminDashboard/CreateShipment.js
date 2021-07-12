@@ -71,7 +71,7 @@ function CreateShipment() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/createShipment.php',
+            url: 'http://shiplive.clonehackers.com/controller/createShipment.php',
             data: formdata
         }).then(res => {
             if (res.data.status === "success") {
@@ -81,6 +81,7 @@ function CreateShipment() {
             } else {
                 notify(res.data.message)
             }
+            console.log(res);
         })
             .catch(error => {
                 console.error(error);
@@ -226,16 +227,16 @@ function CreateShipment() {
                                                     <select value={paymentStatus} onChange={event => setPaymentstatus(event.target.value)} required className="form-control">
                                                         <option value="" className="form-control">payment status</option>
                                                         <option value="paid" className="form-control">Paid</option>
-                                                        <option value="pay on delivery" className="form-control">Pay On Delivery</option>
+                                                        <option value="payondelivery" className="form-control">Pay On Delivery</option>
                                                     </select>
                                                 </div>
                                                 <div className="mt-4 ml-4 mb-4">
                                                     <label>Status</label>
                                                     <select value={status} onChange={event => setStatus(event.target.value)} required className="form-control">
                                                         <option value="" className="form-control"> package status</option>
-                                                        <option value="on hold" className="form-control">On Hold</option>
+                                                        <option value="onhold" className="form-control">On Hold</option>
                                                         <option value="canceled" className="form-control">Canceled</option>
-                                                        <option value="in transit" className="form-control">In Transit</option>
+                                                        <option value="Intransit" className="form-control">In Transit</option>
                                                         <option value="delivered" className="form-control">Delivered</option>
                                                     </select>
                                                 </div>
@@ -257,7 +258,7 @@ function CreateShipment() {
                             </div>
                         </div>
                         <div className="bg-light p-2 mt-2">
-                            <button type="submit" style={{ float: "right" }} className="btn btn-sm btn-info"><i className="fa fa-truck mr-1"></i>Create Shipment</button>
+                            <button type="submit" style={{ float: "right" }} className="btn btn-sm btn-info"><i className="fa fa-ambulance mr-1"></i>Create Shipment</button>
                         </div>
                     </form>
                 </div>

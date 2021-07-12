@@ -1,10 +1,11 @@
 import React from 'react'
-
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import './main.css';
+import { logout } from '../../authHandler/auth'
 
-function Header() {
+
+function Header(props) {
     return (
         <>
             <header>
@@ -20,7 +21,7 @@ function Header() {
                         <ul className="navbar-nav mr-auto" id="navbarthing">
                             <li className="nav-item active mr-2">
                                 <Link to="/dashboard" className="text-muted">
-                                    <i className="fa fa-user text-muted pr-1"></i>IGWEZE HYCIENT
+                                    <i className="fa fa-user text-muted pr-1"></i>{localStorage.getItem('username')}
                                 </Link>                            </li>
                             <li className="nav-item mr-2">
                                 <Link to="/dashboard" className="text-muted">
@@ -42,7 +43,13 @@ function Header() {
                             <li className="nav-item mr-2">
                                 <Link to="" className="text-muted"><i className="fa fa-download text-muted pr-2"></i>Export Pdf</Link>
                             </li>
-                            <li className="nav-item mr-2">
+                            <li className="nav-item mr-2"
+                                onClick={() => {
+                                    logout(() => {
+                                        props.history.push("/dashboard")
+                                    })
+                                }}
+                            >
                                 <i className="fa fa-unlink pr-2 text-muted"></i><b>Logout</b>
                             </li>
                         </ul>
@@ -54,4 +61,4 @@ function Header() {
     )
 }
 
-export default Header
+export default withRouter(Header)

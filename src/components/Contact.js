@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 import Footer from './Footer'
@@ -12,6 +13,22 @@ export default function Contact() {
     const [subject, setSubject] = useState();
     const [message, setMessage] = useState();
 
+    const handleContactUs = e => {
+
+        const formdata = new FormData()
+        formdata.append('fname', fname)
+        formdata.append('lname', lname)
+        formdata.append('email', email)
+        formdata.append('subject', subject)
+        formdata.append('message', message)
+
+        axios.post("", formdata)
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+
+    }
+
+
     return (
         <>
             <Header />
@@ -20,7 +37,7 @@ export default function Contact() {
                 <div className="row">
                     <div className="col-md-7 m-auto pt-5">
                         <div className="card p-2 mt-5 bg-light">
-                            <form className="form-group">
+                            <form className="form-group" onSubmit={handleContactUs}>
                                 <div className="form-inline">
                                     <h6 className="mb-2 mr-1">FirstName</h6>
                                     <input type="text" className="form-control col mb-2 mr-1" value={fname} onChange={event => setFname(event.target.vale)} required />

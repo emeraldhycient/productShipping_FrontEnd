@@ -19,7 +19,7 @@ export default function Tracking() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/tracking.php',
+            url: 'http://shiplive.clonehackers.com/controller/tracking.php',
             data: formdata
         })
             .then(res => {

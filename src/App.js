@@ -5,6 +5,8 @@ import {
   Route
 } from "react-router-dom"
 
+import ProtectedRoutes from "./authHandler/ProtectedRoutes"
+
 import Index from "./components/Index"
 import Contact from "./components/Contact"
 import Login from "./components/Login"
@@ -22,14 +24,14 @@ export default function App() {
       <Switch>
         <Route path="/" exact component={Index}></Route>
         <Route path="/contact_us" component={Contact}></Route>
-        <Route path="/register" component={Register}></Route>
-        <Route path="/tracking" component={Tracking}></Route>
         <Route path="/login" component={Login}></Route>
-        <Route exact path="/dashboard" component={Dashboard}></Route>
-        <Route exact path="/dashboard/createshipment" component={Createshipment}></Route>
-        <Route exact path="/dashboard/allshipments" component={ListShipping}></Route>
-        <Route exact path="/dashboard/manageshipment/" component={Manageshipment}></Route>
-        <Route exact path="/dashboard/manageshipment/:tracking" component={Manageshipment}></Route>
+        <Route path="/register" component={Register}></Route>
+        <Route exact path="/tracking" component={Tracking}></Route>
+        <ProtectedRoutes exact path="/dashboard" component={Dashboard} />
+        <ProtectedRoutes exact path="/dashboard/createshipment" component={Createshipment} />
+        <ProtectedRoutes exact path="/dashboard/allshipments" component={ListShipping} />
+        <ProtectedRoutes exact path="/dashboard/manageshipment/" component={Manageshipment} />
+        <ProtectedRoutes exact path="/dashboard/manageshipment/:tracking" component={Manageshipment} />
       </Switch>
     </Router>
   )

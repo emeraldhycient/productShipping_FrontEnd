@@ -1,10 +1,8 @@
 import React from 'react'
 
-import christian from "../images/kinsey-cB8YiJt_0Y0-unsplash.jpg"
-
 function Testimonies() {
     return (
-        <div style={{ marginTop: "10%" }}>
+        <div style={{ marginTop: "10%" }} className="bg-light">
             <div className="bg-secondary pt-5">
                 <center>
                     <h1 id="whychooseustitle" className="text-info">Recommended Stores</h1>
@@ -40,43 +38,29 @@ function Testimonies() {
                     <h1 id="whychooseustitle" className="text-info">What Our Customers Say</h1>
                     <hr></hr>
                 </center>
-                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src="..." alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>...</h5>
-                                <p>...</p>
+                <div className="testimony">
+                    <div className="container">
+                        <div className="col-md-7 m-auto">
+                            <div className="card mb-3 pl-3 pt-3 pb-2 pr-2 mt-5" style={{ borderRadius: "8px" }}>
+                                <h6 style={{ fontWeight: "bolder", fontSize: "bolder" }}><b>Christian Emily</b></h6>
+                                <span><i className="fa  fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i></span>
+                                <h6 className="pt-2 pl-3 pr-4 ">Excellent delivery service and perfect fit very pleased with the overall package</h6>
+                                <h6 className="offset-10 pb-2 pt-2"><small>Recent Review</small></h6>
                             </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="..." alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>...</h5>
-                                <p>...</p>
+                            <div className="card mb-3 pl-3 pt-3 pb-2 pr-2" style={{ borderRadius: "8px" }}>
+                                <h6 style={{ fontWeight: "bolder", fontSize: "bolder" }}><b>Isaac  Dan</b></h6>
+                                <span><i className="fa  fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i></span>
+                                <h6 className="pt-2 pl-3 pr-4 ">5/5 really good products environmentally friendly. purchased easily. Arrived promptly. Web.</h6>
+                                <h6 className="offset-10 pb-2 pt-2"><small>Recent Review</small></h6>
                             </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src={christian} style={{ width: "100px", height: "200px", borderRadius: "15px" }} alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>Christian Luke</h5>
-                                <p>This is the best delivery  service i have used so far</p>
+                            <div className="card mb-3 pl-3 pt-3 pb-2 pr-2" style={{ borderRadius: "8px" }}>
+                                <h6 style={{ fontWeight: "bolder", fontSize: "bolder" }}><b>Prince Rustov</b></h6><span><i className="fa  fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i><i className="fa fa-star text-warning"></i></span>
+                                <h6 className="pt-2 pl-3 pr-4 ">I was a bit reluctant to require your service but everything went perfect!</h6>
+                                <h6 className="offset-10 pb-2 pt-2"><small>Recent Review</small></h6>
                             </div>
                         </div>
                     </div>
-                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
+
                 </div>
             </div>
 

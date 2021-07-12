@@ -1,42 +1,22 @@
-import axios from "axios"
-
-export const setToken = token => {
-    localStorage.setItem('id_token', token)
+export const setToken = (token, username) => {
+    sessionStorage.setItem('id_token', token)
+    sessionStorage.setItem('username', username)
 }
 
-export const getToken = token => {
-    return localStorage.getItem('id_token')
+export const getToken = () => {
+    return sessionStorage.getItem('id_token')
 }
 
-export const logout = token => {
-    localStorage.removeItem('id_token')
+export const logout = callback => {
+    sessionStorage.removeItem('id_token')
+    sessionStorage.removeItem('username')
+    callback()
 }
 
 export const verifyLogin = () => {
-    let token
-    const formdata = new FormData()
-    formdata.append('verifylogin', 'verify')
-
-    axios({
-            method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/access.php',
-            data: formdata
-        })
-        .then(res => {
-            if (res.data.status === 'success') {
-                token = res.data.token;
-                console.log(res);
-            }
-
-        })
-        .catch(err => console.error(err))
-
-    let storedtoken = localStorage.getItem('id_token')
-
-    if (storedtoken !== token) {
-        return false
+    const token = getToken()
+    if (token) {
+        return true
     }
-
-    return true
-
+    return false
 }

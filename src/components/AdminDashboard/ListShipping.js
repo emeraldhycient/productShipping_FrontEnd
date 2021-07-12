@@ -20,7 +20,7 @@ function ListShipping() {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/listshipping.php',
+            url: 'http://shiplive.clonehackers.com/controller/listshipping.php',
             data: formdata
         })
             .then(res => {

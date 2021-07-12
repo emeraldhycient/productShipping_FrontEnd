@@ -23,7 +23,7 @@ function Parsemanagementlist(props) {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/listshipping.php',
+            url: 'http://shiplive.clonehackers.com/controller/listshipping.php',
             data: formdata
         })
             .then(res => {
@@ -51,7 +51,7 @@ function Parsemanagementlist(props) {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/delete.php',
+            url: 'http://shiplive.clonehackers.com/controller/delete.php',
             data: formdata
         })
             .then(res => {
@@ -131,13 +131,13 @@ function Parsemanagementlist(props) {
                                     <td>{item.bookingdate}</td>
                                     <td>
                                         name: {item.sendername}<br />
-                                       phone : {item.senderphone}<br />
-                                       email : {item.senderemail}
+                                        phone : {item.senderphone}<br />
+                                        email : {item.senderemail}
                                     </td>
                                     <td>
                                         name: {item.receivername}<br />
-                                       phone : {item.receiverphone}<br />
-                                       email : {item.receiveremail}
+                                        phone : {item.receiverphone}<br />
+                                        email : {item.receiveremail}
                                     </td>
                                     <td>{item.qty}</td>
                                     <td>{item.senderaddress}</td>

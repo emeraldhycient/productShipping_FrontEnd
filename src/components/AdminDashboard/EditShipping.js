@@ -36,7 +36,7 @@ function EditShipping(props) {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/tracking.php',
+            url: 'http://shiplive.clonehackers.com/controller/tracking.php',
             data: formdata
         })
             .then(res => {
@@ -97,7 +97,7 @@ function EditShipping(props) {
 
         axios({
             method: "post",
-            url: 'http://localhost/rald/producttrackerapi/api_v1/controller/updateShipment.php',
+            url: 'http://shiplive.clonehackers.com/controller/updateShipment.php',
             data: formdata
         }).then(res => {
             if (res.data.status === "success") {
